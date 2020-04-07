@@ -1,4 +1,4 @@
-#N canvas 679 159 835 818 12;
+#N canvas 367 60 835 818 12;
 #X obj 21 21 midi-keys, f 14;
 #X obj 21 81 oscillator~;
 #X obj 189 82 envelope~;
@@ -10,6 +10,7 @@
 #X obj 22 331 vca~;
 #X obj 21 487 audio-out~;
 #X obj 359 83 lfo~;
+#X obj 453 389 filter~;
 #X connect 0 0 1 0;
 #X connect 0 1 2 0;
 #X connect 1 0 8 0;

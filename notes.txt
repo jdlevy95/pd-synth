@@ -1,4 +1,4 @@
---Setting up git
+-- Setting up git
 Create a repo
 Navigate to project in Terminal
 git init
@@ -10,15 +10,43 @@ git remote -v
 git push -u origin master
 	
 
---getting code for the first time
+-- getting code for the first time
 git clone <repo.git>
 
 
---getting changes
+-- getting changes
 git pull <repo.git>
 
 
---pushing changes
+-- pushing changes
 git add -A
 git commit -m "<Your message here>"
+	git commit -a -m "<Your message here>"
+	might do add/commit all at once. not sure
 git push
+
+
+-- starting a new branch
+	git branch <branch name>
+	git checkout <branch name>
+		git checkout -b <branch name>
+		branch and checkout at once
+	git commit -a -m "<Your message here>"
+		add, commit, push changes as normal
+	
+
+
+-- switching branches
+	git checkout <branch name>
+
+	
+-- merging branch into master
+	checkout the branch you want to merge into. merge the branch into the one you changed 
+	git checkout master
+	git merge <branch name>
+
+
+
+
+	
+
