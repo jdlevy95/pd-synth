@@ -1,0 +1,30 @@
+#N canvas 39 44 544 322 12;
+#X obj 350 18 inlet~;
+#X obj 349 250 dac~;
+#X obj 360 102 metro 100;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array \$0-scope 100 float 5;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.171429 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0;
+#X coords 0 1 100 -1 200 140 1 0 0;
+#X restore 22 47 graph;
+#X obj 360 134 tabwrite~ \$0-scope;
+#X obj 360 70 r \$0-scope-send;
+#X obj 349 218 *~;
+#X obj 367 186 r \$0-dac-send;
+#X obj 11 11 cnv 15 309 189 empty empty audio_out 10 20 0 20 -233017
+-66577 0;
+#X obj 238 55 tgl 15 0 \$0-dac-send \$0-dac-rec dac 17 7 0 10 -262144
+-1 -1 1 1;
+#X obj 236 119 tgl 15 0 \$0-scope-send \$0-scope-rec scope 17 7 0 10
+-262144 -1 -1 0 1;
+#X connect 0 0 4 0;
+#X connect 0 0 6 0;
+#X connect 2 0 4 0;
+#X connect 5 0 2 0;
+#X connect 6 0 1 0;
+#X connect 6 0 1 1;
+#X connect 7 0 6 1;
+#X coords 0 -1 1 1 311 191 2 10 10;
