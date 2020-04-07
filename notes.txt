@@ -1,0 +1,24 @@
+--Setting up git
+Create a repo
+Navigate to project in Terminal
+git init
+git add -A
+git commit -m "Message here"
+git remote add origin <url>.git
+git remote -v 
+	verifies url
+git push -u origin master
+	
+
+--getting code for the first time
+git clone <repo.git>
+
+
+--getting changes
+git pull <repo.git>
+
+
+--pushing changes
+git add -A
+git commit -m "<Your message here>"
+git push
