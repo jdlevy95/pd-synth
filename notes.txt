@@ -1,13 +1,17 @@
+https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+
 -- Setting up git
 Create a repo
 Navigate to project in Terminal
 git init
 git add -A
-git commit -m "Message here"
+git commit -m "<Message here>"
+	git commit -a -m "<Message here>"
+	does add and commit all at once
 git remote add origin <url>.git
 git remote -v 
 	verifies url
-git push -u origin master
+git push -u origin master (double check this)
 	
 
 -- getting code for the first time
@@ -22,7 +26,7 @@ git pull <repo.git>
 git add -A
 git commit -m "<Your message here>"
 	git commit -a -m "<Your message here>"
-	might do add/commit all at once. not sure
+	does add and commit all at once
 git push
 
 
@@ -32,10 +36,9 @@ git push
 		git checkout -b <branch name>
 		branch and checkout at once
 	git commit -a -m "<Your message here>"
-		add, commit, push changes as normal
+	git push -u origin <branch name>
+		
 	
-
-
 -- switching branches
 	git checkout <branch name>
 
