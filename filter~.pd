@@ -1,6 +1,6 @@
 #N canvas 109 161 450 479 12;
 #X obj 185 17 inlet~;
-#X obj 287 366 outlet~;
+#X obj 287 369 outlet~;
 #X obj 299 278 mtof;
 #X obj 287 337 vcf~;
 #X obj 11 11 cnv 15 153 187 empty empty filter 10 20 0 20 -233017 -66577
@@ -13,7 +13,7 @@
 -2 -8 0 10 -262144 -1 -1 0 1;
 #X obj 24 172 hsl 128 15 0 127 0 0 \$0-res-send \$0-res-rec resonance
 -2 -8 0 10 -262144 -1 -1 0 1;
-#X obj 185 46 s~ \$0-inlet1;
+#X obj 185 49 s~ \$0-inlet1;
 #X obj 287 217 r~ \$0-inlet1;
 #X obj 299 246 r \$0-bp-send;
 #X obj 312 308 r \$0-res-send;
@@ -21,24 +21,22 @@
 #X obj 44 275 mtof;
 #X obj 19 217 r~ \$0-inlet1;
 #X obj 19 304 lop~;
-#X obj 44 246 r \$0-lop-send;
-#X obj 158 333 outlet~;
+#X obj 158 336 outlet~;
 #X obj 183 275 mtof;
 #X obj 158 217 r~ \$0-inlet1;
 #X obj 183 246 r \$0-hp-send;
 #X obj 158 304 hip~;
+#X obj 44 246 r \$0-lp-send;
 #X connect 0 0 9 0;
 #X connect 2 0 3 1;
-#X connect 3 0 1 0;
 #X connect 10 0 3 0;
 #X connect 11 0 2 0;
 #X connect 12 0 3 2;
 #X connect 14 0 16 1;
 #X connect 15 0 16 0;
 #X connect 16 0 13 0;
-#X connect 17 0 14 0;
-#X connect 19 0 22 1;
-#X connect 20 0 22 0;
-#X connect 21 0 19 0;
-#X connect 22 0 18 0;
+#X connect 18 0 21 1;
+#X connect 19 0 21 0;
+#X connect 20 0 18 0;
+#X connect 22 0 14 0;
 #X coords 0 -1 1 1 155 189 1 10 10;
