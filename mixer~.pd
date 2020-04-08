@@ -20,6 +20,8 @@ volume4 -2 -8 0 10 -262144 -1 -1 0 1;
 #X obj 341 70 s~ \$0-inlet2;
 #X obj 440 70 s~ \$0-inlet3;
 #X obj 539 70 s~ \$0-inlet4;
+#X obj 284 290 outlet~;
+#X connect 0 0 16 0;
 #X connect 1 0 0 1;
 #X connect 2 0 3 0;
 #X connect 4 0 13 0;
