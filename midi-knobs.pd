@@ -1,5 +1,5 @@
-#N canvas 856 292 544 484 12;
-#X obj 11 11 cnv 15 153 187 empty empty midi_knobs 10 20 0 20 -233017
+#N canvas 165 92 544 484 12;
+#X obj 11 11 cnv 15 199 98 empty empty midi_knobs 10 20 0 20 -233017
 -66577 0;
 #X obj 25 60 vsl 15 32 0 127 0 0 \$0-knob1-send \$0-knob1-rec 1 0 -9
 0 10 -262144 -1 -1 0 1;
@@ -16,7 +16,7 @@
 #X obj 12 128 outlet;
 #X connect 0 0 1 0;
 #X connect 2 0 3 0;
-#X restore 12 211 pd knob1;
+#X restore 11 125 pd knob1;
 #N canvas 0 50 285 198 knob2 0;
 #X obj 12 128 outlet;
 #X obj 12 12 ctlin 21;
@@ -24,7 +24,7 @@
 #X obj 12 96 r \$0-knob2-rec;
 #X connect 1 0 2 0;
 #X connect 3 0 0 0;
-#X restore 103 211 pd knob2;
+#X restore 102 125 pd knob2;
 #N canvas 0 50 285 179 knob3 0;
 #X obj 12 128 outlet;
 #X obj 12 12 ctlin 22;
@@ -32,7 +32,7 @@
 #X obj 12 96 r \$0-knob3-rec;
 #X connect 1 0 2 0;
 #X connect 3 0 0 0;
-#X restore 194 211 pd knob3;
+#X restore 193 125 pd knob3;
 #N canvas 0 50 285 179 knob4 0;
 #X obj 12 128 outlet;
 #X obj 12 12 ctlin 23;
@@ -40,13 +40,13 @@
 #X obj 12 96 r \$0-knob4-rec;
 #X connect 1 0 2 0;
 #X connect 3 0 0 0;
-#X restore 285 211 pd knob4;
-#X obj 12 243 outlet;
-#X obj 103 243 outlet;
-#X obj 194 243 outlet;
-#X obj 285 243 outlet;
+#X restore 284 125 pd knob4;
+#X obj 11 157 outlet;
+#X obj 102 157 outlet;
+#X obj 193 157 outlet;
+#X obj 284 157 outlet;
 #X connect 5 0 9 0;
 #X connect 6 0 10 0;
 #X connect 7 0 11 0;
 #X connect 8 0 12 0;
-#X coords 0 -1 1 1 155 189 1 10 10;
+#X coords 0 -1 1 1 201 100 1 10 10;

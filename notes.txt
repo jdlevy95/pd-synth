@@ -36,6 +36,9 @@ git push
 		git checkout -b <branch name>
 		branch and checkout at once
 	git commit -a -m "<Your message here>"
+	
+	
+-- remote branches (still dont know a whole lot about)
 	git push -u origin <branch name>
 		
 	

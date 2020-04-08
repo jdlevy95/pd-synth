@@ -1,4 +1,4 @@
-#N canvas 574 255 486 627 12;
+#N canvas 574 251 486 627 12;
 #X obj 220 333 line~;
 #X msg 220 296 0 500;
 #X obj 220 266 select 0;
@@ -16,7 +16,7 @@
 #X obj 12 489 outlet~;
 #X text 202 228 simple attack/decay;
 #X msg 273 296 1 500;
-#X obj 11 11 cnv 15 153 187 empty empty envelope 10 20 0 20 -233017
+#X obj 11 11 cnv 15 199 199 empty empty envelope 10 20 0 20 -233017
 -66577 0;
 #X obj 24 64 hsl 128 15 0 300 0 0 empty empty attack -2 -8 0 10 -262144
 -1 -1 0 1;
@@ -42,4 +42,4 @@
 #X connect 19 0 7 2;
 #X connect 20 0 7 3;
 #X connect 21 0 9 1;
-#X coords 0 -1 1 1 155 189 1 10 10;
+#X coords 0 -1 1 1 201 201 1 10 10;
