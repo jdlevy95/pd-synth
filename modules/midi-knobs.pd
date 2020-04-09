@@ -1,15 +1,5 @@
-#N canvas 721 380 544 484 12;
-#X obj 14 14 cnv 15 193 92 empty empty midi_knobs 10 20 0 20 -233017
--66577 0;
-#X obj 25 60 vsl 15 32 0 127 0 0 \$0-knob1-send \$0-knob1-rec 1 0 -9
-0 10 -262144 -1 -1 0 1;
-#X obj 51 60 vsl 15 32 0 127 0 0 \$0-knob2-send \$0-knob2-rec 2 0 -9
-0 10 -262144 -1 -1 0 1;
-#X obj 77 60 vsl 15 32 0 127 0 0 \$0-knob3-send \$0-knob3-rec 3 0 -9
-0 10 -262144 -1 -1 0 1;
-#X obj 103 60 vsl 15 32 0 127 0 0 \$0-knob4-send \$0-knob4-rec 4 0
--9 0 10 -262144 -1 -1 0 1;
-#N canvas 29 68 285 236 knob1 0;
+#N canvas 290 409 544 484 12;
+#N canvas 29 68 285 217 knob1 0;
 #X obj 12 12 ctlin 20;
 #X obj 12 44 s \$0-knob1-rec;
 #X obj 12 96 r \$0-knob1-rec;
@@ -45,8 +35,18 @@
 #X obj 102 157 outlet;
 #X obj 193 157 outlet;
 #X obj 284 157 outlet;
-#X connect 5 0 9 0;
-#X connect 6 0 10 0;
-#X connect 7 0 11 0;
-#X connect 8 0 12 0;
-#X coords 0 -1 1 1 201 100 2 10 10;
+#X obj 14 14 cnv 15 92 92 empty empty knobs 10 20 0 20 -233017 -66577
+0;
+#X obj 24 54 hsl 32 15 0 1 0 0 \$0-knob1-send \$0-knob1-rec 1 -2 -6
+0 10 -262144 -1 -1 0 1;
+#X obj 24 80 hsl 32 15 0 1 0 0 \$0-knob3-send \$0-knob3-rec 3 -2 -6
+0 10 -262144 -1 -1 0 1;
+#X obj 65 54 hsl 32 15 0 1 0 0 \$0-knob2-send \$0-knob2-rec 2 -2 -6
+0 10 -262144 -1 -1 0 1;
+#X obj 65 80 hsl 32 15 0 1 0 0 \$0-knob4-send \$0-knob4-rec 4 -2 -6
+0 10 -262144 -1 -1 0 1;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 2 0 6 0;
+#X connect 3 0 7 0;
+#X coords 0 -1 1 1 100 100 2 10 10;

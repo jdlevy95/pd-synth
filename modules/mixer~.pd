@@ -1,0 +1,35 @@
+#N canvas 588 93 743 687 12;
+#X obj 225 16 r \$0-volume1-send;
+#X obj 132 16 inlet~;
+#X obj 176 168 inlet~;
+#X obj 133 597 outlet~;
+#X obj 176 200 vca~;
+#X obj 209 343 vca~;
+#X obj 133 486 vca~;
+#X obj 269 168 r \$0-volume2-send;
+#X obj 302 311 r \$0-volume3-send;
+#X obj 226 454 r \$0-master-send;
+#X obj 209 311 inlet~;
+#X obj 14 14 cnv 15 92 92 empty empty mixer 10 20 0 20 -233017 -66577
+0;
+#X obj 24 54 hsl 32 15 0 1 0 0 \$0-volume1-send \$0-volume1-rec 1 -2
+-6 0 10 -262144 -1 -1 0 1;
+#X obj 24 80 hsl 32 15 0 1 0 0 \$0-volume3-send \$0-volume3-rec 3 -2
+-6 0 10 -262144 -1 -1 0 1;
+#X obj 65 54 hsl 32 15 0 1 0 0 \$0-volume2-send \$0-volume2-rec 2 -2
+-6 0 10 -262144 -1 -1 0 1;
+#X obj 65 80 hsl 32 15 0 1 0 0 \$0-master-send \$0-master-rec master
+-2 -6 0 10 -262144 -1 -1 0 1;
+#X obj 132 57 vca~;
+#X connect 0 0 16 1;
+#X connect 1 0 16 0;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 7 0 4 1;
+#X connect 8 0 5 1;
+#X connect 9 0 6 1;
+#X connect 10 0 5 0;
+#X connect 16 0 6 0;
+#X coords 0 -1 1 1 100 100 2 10 10;

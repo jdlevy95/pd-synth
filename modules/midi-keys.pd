@@ -1,0 +1,9 @@
+#N canvas 113 54 425 200 12;
+#X obj 148 35 notein;
+#X obj 167 67 outlet;
+#X obj 148 99 outlet;
+#X obj 14 14 cnv 15 92 92 empty empty keys 10 20 0 20 -233017 -66577
+0;
+#X connect 0 0 2 0;
+#X connect 0 1 1 0;
+#X coords 0 -1 1 1 100 100 2 10 10;

@@ -1,9 +1,0 @@
-#N canvas 113 54 425 200 12;
-#X obj 241 26 notein;
-#X obj 260 58 outlet;
-#X obj 241 90 outlet;
-#X obj 14 14 cnv 15 193 92 empty empty midi-keys 10 20 0 20 -233017
--66577 0;
-#X connect 0 0 2 0;
-#X connect 0 1 1 0;
-#X coords 0 -1 1 1 201 100 2 10 10;
