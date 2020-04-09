@@ -1,13 +1,13 @@
-#N canvas 109 161 450 479 12;
+#N canvas 1087 119 450 479 12;
 #X obj 228 149 inlet~;
 #X obj 287 389 outlet~;
 #X obj 299 298 mtof;
 #X obj 287 357 vcf~;
-#X obj 11 11 cnv 15 199 199 empty empty filter 10 20 0 20 -233017 -66577
+#X obj 14 14 cnv 15 193 193 empty empty filter 10 20 0 20 -233017 -66577
 0;
 #X obj 24 64 hsl 128 15 0 127 0 0 \$0-lp-send \$0-lp-rec low_pass -2
 -8 0 10 -262144 -1 -1 0 1;
-#X obj 24 100 hsl 128 15 0 127 0 0 \$0-lp-send \$0-lp-rec high_pass
+#X obj 24 100 hsl 128 15 0 127 0 0 \$0-hp-send \$0-hp-rec high_pass
 -2 -8 0 10 -262144 -1 -1 0 1;
 #X obj 24 136 hsl 128 15 0 127 0 0 \$0-bp-send \$0-bp-rec band_pass
 -2 -8 0 10 -262144 -1 -1 0 1;
@@ -17,18 +17,19 @@
 #X obj 287 237 r~ \$0-inlet1;
 #X obj 299 266 r \$0-bp-send;
 #X obj 312 328 r \$0-res-send;
-#X obj 19 353 outlet~;
-#X obj 44 295 mtof;
+#X obj 19 365 outlet~;
+#X obj 44 301 mtof;
 #X obj 19 237 r~ \$0-inlet1;
-#X obj 19 304 lop~;
+#X obj 19 333 lop~;
 #X obj 158 356 outlet~;
 #X obj 183 295 mtof;
 #X obj 158 237 r~ \$0-inlet1;
 #X obj 183 266 r \$0-hp-send;
 #X obj 158 324 hip~;
-#X obj 44 266 r \$0-lp-send;
+#X obj 44 269 r \$0-lp-send;
 #X connect 0 0 9 0;
 #X connect 2 0 3 1;
+#X connect 3 0 1 0;
 #X connect 10 0 3 0;
 #X connect 11 0 2 0;
 #X connect 12 0 3 2;
@@ -38,5 +39,6 @@
 #X connect 18 0 21 1;
 #X connect 19 0 21 0;
 #X connect 20 0 18 0;
+#X connect 21 0 17 0;
 #X connect 22 0 14 0;
-#X coords 0 -1 1 1 201 201 1 10 10;
+#X coords 0 -1 1 1 201 201 2 10 10;

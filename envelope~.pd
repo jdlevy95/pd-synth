@@ -1,31 +1,35 @@
-#N canvas 574 251 486 627 12;
-#X obj 220 333 line~;
-#X msg 220 296 0 500;
-#X obj 220 266 select 0;
-#X text 224 401 Attack (0-300 ms);
-#X text 224 420 Decay (0-500 ms);
-#X text 224 458 Release (0-1000 ms);
-#X text 224 438 Sustain (0-1 units);
-#X obj 44 287 pack f f f f;
-#X obj 12 243 sel 0;
-#X obj 12 393 pack f f;
-#X obj 12 457 vline~;
-#X msg 12 425 0 \$2;
-#X msg 44 319 1 \$2 \, \$4 \$3 \$2;
-#X obj 12 211 inlet;
-#X obj 12 489 outlet~;
-#X text 202 228 simple attack/decay;
-#X msg 273 296 1 500;
-#X obj 11 11 cnv 15 199 199 empty empty envelope 10 20 0 20 -233017
+#N canvas 744 237 1016 682 12;
+#X obj 324 139 line~;
+#X msg 324 102 0 500;
+#X obj 324 72 select 0;
+#X text 74 526 Attack (0-300 ms);
+#X text 74 545 Decay (0-500 ms);
+#X text 74 583 Release (0-1000 ms);
+#X text 74 563 Sustain (0-1 units);
+#X obj 38 384 pack f f f f;
+#X obj 6 340 sel 0;
+#X obj 6 500 pack f f;
+#X obj 6 564 vline~;
+#X msg 6 532 0 \$2;
+#X msg 38 416 1 \$2 \, \$4 \$3 \$2;
+#X obj 6 308 inlet;
+#X obj 6 596 outlet~;
+#X text 306 34 simple attack/decay;
+#X msg 377 102 1 500;
+#X obj 14 14 cnv 15 193 193 empty empty envelope 10 20 0 20 -233017
 -66577 0;
-#X obj 24 64 hsl 128 15 0 300 0 0 empty empty attack -2 -8 0 10 -262144
--1 -1 0 1;
-#X obj 24 100 hsl 128 15 0 500 0 0 empty empty decay -2 -8 0 10 -262144
--1 -1 0 1;
-#X obj 24 136 hsl 128 15 0 1 0 0 empty empty sustain -2 -8 0 10 -262144
--1 -1 0 1;
-#X obj 24 172 hsl 128 15 0 1000 0 0 empty empty release -2 -8 0 10
--262144 -1 -1 0 1;
+#X obj 24 64 hsl 128 15 0 300 0 0 \$0-attack-send \$0-attack-rec attack
+-2 -8 0 10 -262144 -1 -1 0 1;
+#X obj 24 100 hsl 128 15 0 500 0 0 \$0-decay-send \$0-decay-rec decay
+-2 -8 0 10 -262144 -1 -1 0 1;
+#X obj 24 136 hsl 128 15 0 1 0 0 \$0-sustain-send \$0-sustain-rec sustain
+-2 -8 0 10 -262144 -1 -1 12700 1;
+#X obj 24 172 hsl 128 15 0 1000 0 0 \$0-release-send \$0-release-rec
+release -2 -8 0 10 -262144 -1 -1 0 1;
+#X obj 65 288 r \$0-attack-send;
+#X obj 92 320 r \$0-decay-send;
+#X obj 119 352 r \$0-sustain-send;
+#X obj 59 468 r \$0-release-send;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
 #X connect 2 1 16 0;
@@ -38,8 +42,8 @@
 #X connect 12 0 10 0;
 #X connect 13 0 8 0;
 #X connect 16 0 0 0;
-#X connect 18 0 7 1;
-#X connect 19 0 7 2;
-#X connect 20 0 7 3;
-#X connect 21 0 9 1;
-#X coords 0 -1 1 1 201 201 1 10 10;
+#X connect 22 0 7 1;
+#X connect 23 0 7 2;
+#X connect 24 0 7 3;
+#X connect 25 0 9 1;
+#X coords 0 -1 1 1 201 201 2 10 10;

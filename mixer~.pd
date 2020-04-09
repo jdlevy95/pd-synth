@@ -1,52 +1,35 @@
-#N canvas 339 121 824 429 12;
-#X obj 15 323 vca~;
-#X obj 85 291 r \$0-volume1-send;
-#X obj 232 18 inlet~;
-#X obj 232 50 s~ \$0-inlet1;
-#X obj 331 18 inlet~;
-#X obj 430 18 inlet~;
-#X obj 529 18 inlet~;
-#X obj 15 259 r~ \$0-inlet1;
-#X obj 11 11 cnv 15 199 199 empty empty mixer 10 20 0 20 -233017 -66577
+#N canvas 155 282 1022 600 12;
+#X obj 232 71 vca~;
+#X obj 325 39 r \$0-volume1-send;
+#X obj 232 39 inlet~;
+#X obj 368 101 inlet~;
+#X obj 14 14 cnv 15 193 193 empty empty mixer 10 20 0 20 -233017 -66577
 0;
-#X obj 24 64 hsl 128 15 0 127 0 0 \$0-volume1-send \$0-volume1-rec
-volume1 -2 -8 0 10 -262144 -1 -1 0 1;
-#X obj 24 100 hsl 128 15 0 127 0 0 \$0-volume2-send \$0-volume2-rec
-volume2 -2 -8 0 10 -262144 -1 -1 0 1;
-#X obj 24 136 hsl 128 15 0 127 0 0 \$0-volume3-send \$0-volume3-rec
-volume3 -2 -8 0 10 -262144 -1 -1 0 1;
-#X obj 24 172 hsl 128 15 0 127 0 0 \$0-volume4-send \$0-volume4-rec
-volume4 -2 -8 0 10 -262144 -1 -1 0 1;
-#X obj 331 50 s~ \$0-inlet2;
-#X obj 430 50 s~ \$0-inlet3;
-#X obj 529 50 s~ \$0-inlet4;
-#X obj 15 429 outlet~;
-#X obj 215 323 vca~;
-#X obj 215 429 outlet~;
-#X obj 415 323 vca~;
-#X obj 415 429 outlet~;
-#X obj 615 323 vca~;
-#X obj 615 429 outlet~;
-#X obj 215 259 r~ \$0-inlet2;
-#X obj 285 291 r \$0-volume2-send;
-#X obj 415 259 r~ \$0-inlet3;
-#X obj 485 291 r \$0-volume3-send;
-#X obj 615 259 r~ \$0-inlet4;
-#X obj 685 291 r \$0-volume4-send;
-#X connect 0 0 16 0;
+#X obj 24 64 hsl 128 15 0 1 0 0 \$0-volume1-send \$0-volume1-rec volume1
+-2 -8 0 10 -262144 -1 -1 2400 1;
+#X obj 24 100 hsl 128 15 0 1 0 0 \$0-volume2-send \$0-volume2-rec volume2
+-2 -8 0 10 -262144 -1 -1 7500 1;
+#X obj 24 136 hsl 128 15 0 1 0 0 \$0-volume3-send \$0-volume3-rec volume3
+-2 -8 0 10 -262144 -1 -1 0 1;
+#X obj 24 172 hsl 128 15 0 1 0 0 \$0-master-send \$0-master-rec master
+-2 -8 0 10 -262144 -1 -1 10000 1;
+#X obj 313 494 outlet~;
+#X obj 368 133 vca~;
+#X obj 511 198 vca~;
+#X obj 313 383 vca~;
+#X obj 461 101 r \$0-volume2-send;
+#X obj 604 166 r \$0-volume3-send;
+#X obj 406 351 r \$0-master-send;
+#X obj 511 166 inlet~;
+#X connect 0 0 12 0;
 #X connect 1 0 0 1;
-#X connect 2 0 3 0;
-#X connect 4 0 13 0;
-#X connect 5 0 14 0;
-#X connect 6 0 15 0;
-#X connect 7 0 0 0;
-#X connect 17 0 18 0;
-#X connect 19 0 20 0;
-#X connect 21 0 22 0;
-#X connect 23 0 17 0;
-#X connect 24 0 17 1;
-#X connect 25 0 19 0;
-#X connect 26 0 19 1;
-#X connect 27 0 21 0;
-#X connect 28 0 21 1;
-#X coords 0 -1 1 1 201 201 1 10 10;
+#X connect 2 0 0 0;
+#X connect 3 0 10 0;
+#X connect 10 0 12 0;
+#X connect 11 0 12 0;
+#X connect 12 0 9 0;
+#X connect 13 0 10 1;
+#X connect 14 0 11 1;
+#X connect 15 0 12 1;
+#X connect 16 0 11 0;
+#X coords 0 -1 1 1 201 201 2 10 10;
