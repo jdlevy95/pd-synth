@@ -1,4 +1,4 @@
-#N canvas 683 61 610 311 12;
+#N canvas 795 66 610 311 12;
 #X obj 137 20 inlet;
 #N canvas 0 50 450 300 sine~ 0;
 #X obj 12 44 osc~;
@@ -34,19 +34,20 @@
 #X obj 134 231 outlet~;
 #X obj 223 231 outlet~;
 #X obj 307 231 outlet~;
-#X obj 137 52 s \$0-lfo-freq-rec;
-#X obj 134 103 r \$0-lfo-freq-send;
 #X obj 134 135 mtof;
 #X obj 14 14 cnv 15 92 92 empty empty lfo 10 20 0 20 -233017 -66577
 0;
-#X obj 24 54 hsl 32 15 0 1 0 0 \$0-freq-send \$0-freq-rec freq -2 -6
-0 10 -262144 -1 -1 0 1;
-#X connect 0 0 7 0;
+#X obj 24 54 hsl 32 15 -64 63 0 0 \$0-freq-send \$0-freq-rec freq -2
+-6 0 10 -262144 -1 -1 0 1;
+#X obj 137 52 s \$0-freq-rec;
+#X obj 134 103 r \$0-freq-send;
+#X text 198 19 todo: math;
+#X connect 0 0 10 0;
 #X connect 1 0 4 0;
 #X connect 2 0 5 0;
 #X connect 3 0 6 0;
-#X connect 8 0 9 0;
-#X connect 9 0 1 0;
-#X connect 9 0 2 0;
-#X connect 9 0 3 0;
+#X connect 7 0 1 0;
+#X connect 7 0 2 0;
+#X connect 7 0 3 0;
+#X connect 11 0 7 0;
 #X coords 0 -1 1 1 100 100 2 10 10;

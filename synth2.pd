@@ -1,4 +1,4 @@
-#N canvas 645 165 958 884 12;
+#N canvas 178 170 958 884 12;
 #X obj 279 308 modules/audio-out~;
 #X obj 157 184 modules/noise1~;
 #X obj 35 41 modules/midi-keys;
@@ -10,4 +10,4 @@
 #X obj 274 173 modules/lfo~;
 #X obj 412 175 modules/envelope~;
 #X obj 543 171 modules/filter~;
-#X obj 401 36 modules/midi-wheels;
+#X connect 2 0 6 0;
