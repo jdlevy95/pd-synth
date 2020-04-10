@@ -11,14 +11,11 @@
 #X obj 632 470 modules/envelope~;
 #X obj 588 135 modules/filter~;
 #X obj 589 297 modules/midi-keys;
-#X obj 495 472 modules/oscillator~;
+#X obj 204 303 modules/oscillator~;
 #X obj 535 604 modules/vca~;
-#X obj 478 737 modules/vca~;
+#X obj 708 40 modules/midi-wheels;
+#X connect 2 0 12 0;
 #X connect 6 0 5 0;
 #X connect 7 0 0 0;
-#X connect 9 0 13 1;
-#X connect 11 0 12 0;
 #X connect 11 1 9 0;
-#X connect 12 0 13 0;
-#X connect 13 0 14 1;
-#X connect 14 0 7 0;
+#X connect 12 2 7 0;

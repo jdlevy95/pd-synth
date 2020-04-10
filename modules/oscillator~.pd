@@ -1,7 +1,5 @@
-#N canvas 880 266 518 284 12;
+#N canvas 1202 255 518 284 12;
 #X obj 137 18 inlet;
-#X obj 137 50 s \$0-osc-freq-rec;
-#X obj 137 102 r \$0-osc-freq-send;
 #N canvas 0 50 450 300 sine~ 0;
 #X obj 12 44 osc~;
 #X obj 12 76 outlet~;
@@ -20,18 +18,20 @@
 #X connect 2 0 3 0;
 #X connect 4 0 0 0;
 #X restore 228 186 pd saw~;
-#N canvas 84 106 450 300 square~ 0;
+#N canvas 197 369 450 300 square~ 1;
 #X obj 12 44 phasor~;
 #X obj 12 108 *~ 2;
 #X obj 12 140 -~ 1;
-#X obj 12 76 expr~ $v1 > 0.5;
 #X obj 12 172 outlet~;
 #X obj 12 12 inlet;
-#X connect 0 0 3 0;
+#X obj 12 76 expr~ $v1 > $v2;
+#X obj 114 44 r \$0-pwm-send;
+#X connect 0 0 5 0;
 #X connect 1 0 2 0;
-#X connect 2 0 4 0;
-#X connect 3 0 1 0;
-#X connect 5 0 0 0;
+#X connect 2 0 3 0;
+#X connect 4 0 0 0;
+#X connect 5 0 1 0;
+#X connect 6 0 5 1;
 #X restore 312 186 pd square~;
 #X obj 137 218 outlet~;
 #X obj 228 218 outlet~;
@@ -39,15 +39,19 @@
 #X obj 137 134 mtof;
 #X obj 14 14 cnv 15 92 92 empty empty osc 10 20 0 20 -233017 -66577
 0;
-#X obj 24 54 hsl 32 15 0 127 0 0 \$0-osc-freq-send \$0-osc-freq-rec
-freq -2 -6 0 10 -262144 -1 -1 1857 1;
-#X text 215 13 todo: frequency modulation \, pwm;
-#X connect 0 0 1 0;
-#X connect 2 0 9 0;
+#X obj 24 54 hsl 32 15 0 127 0 0 \$0-freq-send \$0-freq-rec freq -2
+-6 0 10 -262144 -1 -1 1220 1;
+#X obj 24 80 hsl 32 15 0 1 0 0 \$0-pwm-send \$0-pwm-rec pwm -2 -6 0
+10 -262144 -1 -1 1400 1;
+#X obj 137 50 s \$0-freq-rec;
+#X obj 137 102 r \$0-freq-send;
+#X text 215 15 todo: frequency modulation \, pwm inlet;
+#X connect 0 0 11 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
 #X connect 3 0 6 0;
-#X connect 4 0 7 0;
-#X connect 5 0 8 0;
-#X connect 9 0 3 0;
-#X connect 9 0 4 0;
-#X connect 9 0 5 0;
+#X connect 7 0 1 0;
+#X connect 7 0 2 0;
+#X connect 7 0 3 0;
+#X connect 12 0 7 0;
 #X coords 0 -1 1 1 100 100 2 10 10;
