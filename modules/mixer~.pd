@@ -4,7 +4,7 @@
 #X obj 14 14 cnv 15 92 92 empty empty mixer 10 20 0 20 -233017 -66577
 0;
 #X obj 24 54 hsl 32 15 0 1 0 0 \$0-volume1-send \$0-volume1-rec 1 -2
--6 0 10 -262144 -1 -1 0 1;
+-6 0 10 -262144 -1 -1 900 1;
 #X obj 24 80 hsl 32 15 0 1 0 0 \$0-volume3-send \$0-volume3-rec 3 -2
 -6 0 10 -262144 -1 -1 0 1;
 #X obj 65 54 hsl 32 15 0 1 0 0 \$0-volume2-send \$0-volume2-rec 2 -2
@@ -12,29 +12,26 @@
 #X obj 65 80 hsl 32 15 0 1 0 0 \$0-volume4-send \$0-volume4-rec 4 -2
 -6 0 10 -262144 -1 -1 0 1;
 #X obj 131 62 vca~;
-#X obj 131 173 outlet~;
+#X obj 131 343 outlet~;
 #X obj 252 72 inlet~;
 #X obj 252 104 vca~;
-#X obj 252 215 outlet~;
 #X obj 345 72 r \$0-volume2-send;
 #X obj 373 114 inlet~;
 #X obj 373 146 vca~;
-#X obj 373 257 outlet~;
 #X obj 494 156 inlet~;
 #X obj 494 188 vca~;
-#X obj 494 299 outlet~;
 #X obj 466 114 r \$0-volume3-send;
 #X obj 587 156 r \$0-volume4-send;
 #X connect 0 0 7 1;
 #X connect 1 0 7 0;
 #X connect 7 0 8 0;
 #X connect 9 0 10 0;
-#X connect 10 0 11 0;
-#X connect 12 0 10 1;
-#X connect 13 0 14 0;
+#X connect 10 0 8 0;
+#X connect 11 0 10 1;
+#X connect 12 0 13 0;
+#X connect 13 0 8 0;
 #X connect 14 0 15 0;
-#X connect 16 0 17 0;
-#X connect 17 0 18 0;
-#X connect 19 0 14 1;
-#X connect 20 0 17 1;
+#X connect 15 0 8 0;
+#X connect 16 0 13 1;
+#X connect 17 0 15 1;
 #X coords 0 -1 1 1 100 100 2 10 10;

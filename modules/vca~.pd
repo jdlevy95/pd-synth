@@ -3,7 +3,7 @@
 #X obj 171 117 outlet~;
 #X obj 14 14 cnv 15 92 92 empty empty vca 10 20 0 20 -233017 -66577
 0;
-#X obj 189 53 inlet~;
+#X obj 241 22 inlet~;
 #X obj 171 85 *~;
 #X connect 0 0 4 0;
 #X connect 3 0 4 1;
