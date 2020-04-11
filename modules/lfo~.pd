@@ -7,9 +7,9 @@
 #X connect 0 0 1 0;
 #X connect 2 0 0 0;
 #X restore 134 199 pd sine~;
-#N canvas 0 50 450 300 saw~ 0;
+#N canvas 0 50 450 216 saw~ 0;
 #X obj 12 44 phasor~;
-#X obj 12 140 outlet~;
+#X obj 12 76 outlet~;
 #X obj 12 12 inlet;
 #X connect 0 0 1 0;
 #X connect 2 0 0 0;
