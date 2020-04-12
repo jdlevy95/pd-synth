@@ -2,9 +2,9 @@
 #X obj 14 14 cnv 15 92 92 empty empty wheels 10 20 0 20 -233017 -66577
 0;
 #X obj 24 54 hsl 32 15 0.5 1.5 0 0 \$0-bend-send \$0-bend-rec bend
--2 -6 0 10 -262144 -1 -1 1550 1;
+-2 -6 0 10 -262144 -1 -1 0 1;
 #X obj 65 54 hsl 32 15 0 127 0 0 \$0-amount-send \$0-amount-rec amt
--2 -6 0 10 -262144 -1 -1 122 1;
+-2 -6 0 10 -262144 -1 -1 0 1;
 #X obj 137 23 bendin;
 #X floatatom 137 119 5 0 0 0 - - -;
 #X obj 137 55 / 16384;
