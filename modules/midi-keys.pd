@@ -17,7 +17,7 @@
 #X obj 618 178 s \$0-gate;
 #X obj 586 305 s \$0-gate;
 #X obj 24 54 hsl 32 15 0 127 0 0 \$0-note-send \$0-note-rec note -2
--6 0 10 -262144 -1 -1 1635 1;
+-6 0 10 -262144 -1 -1 1513 1;
 #X obj 136 80 s \$0-note-rec;
 #X obj 586 16 r \$0-note-send;
 #X obj 309 16 r \$0-note-send;
@@ -31,6 +31,7 @@
 #X obj 369 48 r \$0-velocity;
 #X obj 604 80 r \$0-velocity;
 #X obj 369 112 s \$0-stripped-velocity-rec;
+#X obj 116 493 print;
 #X connect 0 0 17 0;
 #X connect 0 1 25 0;
 #X connect 2 0 9 0;

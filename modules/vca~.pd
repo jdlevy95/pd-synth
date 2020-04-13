@@ -1,11 +1,11 @@
-#N canvas 812 203 628 513 12;
-#X obj 171 21 inlet~;
-#X obj 171 117 outlet~;
-#X obj 14 14 cnv 15 92 92 empty empty vca 10 20 0 20 -233017 -66577
+#N canvas 823 363 628 513 12;
+#X obj 113 26 inlet~;
+#X obj 113 122 outlet~;
+#X obj 14 14 cnv 15 44 44 empty empty vca 10 20 0 20 -233017 -66577
 0;
-#X obj 241 22 inlet~;
-#X obj 171 85 *~;
+#X obj 131 58 inlet~;
+#X obj 113 90 *~;
 #X connect 0 0 4 0;
 #X connect 3 0 4 1;
 #X connect 4 0 1 0;
-#X coords 0 -1 1 1 100 100 2 10 10;
+#X coords 0 -1 1 1 52 52 2 10 10;
