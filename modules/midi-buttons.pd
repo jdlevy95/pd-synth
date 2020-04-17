@@ -29,6 +29,12 @@
 #X obj 144 234 r \$0-button2-rec;
 #X obj 271 234 r \$0-button3-rec;
 #X obj 398 234 r \$0-button4-rec;
+#X obj 121 10 loadbang;
+#X msg 121 42 0;
+#X obj 121 74 s \$0-button1-rec;
+#X obj 248 74 s \$0-button2-rec;
+#X obj 375 74 s \$0-button3-rec;
+#X obj 502 74 s \$0-button4-rec;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 3 0 8 0;
@@ -41,4 +47,9 @@
 #X connect 22 0 19 0;
 #X connect 23 0 20 0;
 #X connect 24 0 21 0;
+#X connect 25 0 26 0;
+#X connect 26 0 27 0;
+#X connect 26 0 28 0;
+#X connect 26 0 29 0;
+#X connect 26 0 30 0;
 #X coords 0 -1 1 1 100 100 2 10 10;

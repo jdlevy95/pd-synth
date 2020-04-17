@@ -1,4 +1,4 @@
-#N canvas 270 529 862 284 12;
+#N canvas 270 529 520 284 12;
 #X obj 137 18 inlet;
 #N canvas 0 50 450 300 sine~ 0;
 #X obj 12 44 osc~;
@@ -40,15 +40,17 @@
 #X obj 14 14 cnv 15 92 92 empty empty osc 10 20 0 20 -233017 -66577
 0;
 #X obj 24 54 hsl 32 15 0 127 0 0 \$0-freq-send \$0-freq-rec freq -2
--6 0 10 -262144 -1 -1 1391 1;
+-6 0 10 -262144 -1 -1 1220 1;
 #X obj 24 80 hsl 32 15 0 1 0 0 \$0-pwm-send \$0-pwm-rec pwm -2 -6 0
-10 -262144 -1 -1 0 1;
+10 -262144 -1 -1 732 1;
 #X obj 137 50 s \$0-freq-rec;
 #X obj 137 102 r \$0-freq-send;
 #X obj 267 18 inlet;
-#X obj 267 82 s \$0-pwm-rec;
-#X text 414 165 todo: frequency modulation;
+#X obj 267 146 s \$0-pwm-rec;
+#X text 13 247 todo: frequency modulation;
 #X obj 267 50 / 127;
+#X obj 277 82 loadbang;
+#X msg 277 114 0.5;
 #X connect 0 0 11 0;
 #X connect 1 0 4 0;
 #X connect 2 0 5 0;
@@ -59,4 +61,6 @@
 #X connect 12 0 7 0;
 #X connect 13 0 16 0;
 #X connect 16 0 14 0;
+#X connect 17 0 18 0;
+#X connect 18 0 14 0;
 #X coords 0 -1 1 1 100 100 2 10 10;
