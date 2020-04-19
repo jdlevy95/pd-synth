@@ -1,4 +1,4 @@
-#N canvas 270 529 520 284 12;
+#N canvas -8 -8 1920 1007 12;
 #X obj 137 18 inlet;
 #N canvas 0 50 450 300 sine~ 0;
 #X obj 12 44 osc~;
@@ -6,7 +6,7 @@
 #X obj 12 12 inlet;
 #X connect 0 0 1 0;
 #X connect 2 0 0 0;
-#X restore 137 186 pd sine~;
+#X restore 11 225 pd sine~;
 #N canvas 0 50 450 300 saw~ 0;
 #X obj 12 44 phasor~;
 #X obj 12 76 *~ 2;
@@ -17,7 +17,7 @@
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 4 0 0 0;
-#X restore 228 186 pd saw~;
+#X restore 102 225 pd saw~;
 #N canvas 197 369 450 300 square~ 0;
 #X obj 12 44 phasor~;
 #X obj 12 108 *~ 2;
@@ -32,25 +32,27 @@
 #X connect 4 0 0 0;
 #X connect 5 0 1 0;
 #X connect 6 0 5 1;
-#X restore 312 186 pd square~;
-#X obj 137 218 outlet~;
-#X obj 228 218 outlet~;
-#X obj 312 218 outlet~;
-#X obj 137 134 mtof;
+#X restore 186 225 pd square~;
+#X obj 11 257 outlet~;
+#X obj 102 257 outlet~;
+#X obj 186 257 outlet~;
+#X obj 11 173 mtof;
 #X obj 14 14 cnv 15 92 92 empty empty osc 10 20 0 20 -233017 -66577
 0;
 #X obj 24 54 hsl 32 15 0 127 0 0 \$0-freq-send \$0-freq-rec freq -2
--6 0 10 -262144 -1 -1 1220 1;
-#X obj 24 80 hsl 32 15 0 1 0 0 \$0-pwm-send \$0-pwm-rec pwm -2 -6 0
-10 -262144 -1 -1 732 1;
+-6 0 10 -262144 -1 -1 1294 1;
+#X obj 24 80 hsl 32 15 0.01 0.99 0 0 \$0-pwm-send \$0-pwm-rec pwm -2
+-6 0 10 -262144 -1 -1 0 1;
 #X obj 137 50 s \$0-freq-rec;
-#X obj 137 102 r \$0-freq-send;
+#X obj 11 141 r \$0-freq-send;
 #X obj 267 18 inlet;
-#X obj 267 146 s \$0-pwm-rec;
-#X text 13 247 todo: frequency modulation;
 #X obj 267 50 / 127;
-#X obj 277 82 loadbang;
-#X msg 277 114 0.5;
+#X obj 323 178 loadbang;
+#X msg 323 210 0.5;
+#X obj 267 82 sel 0 1;
+#X obj 313 242 s \$0-pwm-rec;
+#X msg 267 114 0.01;
+#X msg 290 146 0.99;
 #X connect 0 0 11 0;
 #X connect 1 0 4 0;
 #X connect 2 0 5 0;
@@ -59,8 +61,13 @@
 #X connect 7 0 2 0;
 #X connect 7 0 3 0;
 #X connect 12 0 7 0;
-#X connect 13 0 16 0;
-#X connect 16 0 14 0;
-#X connect 17 0 18 0;
-#X connect 18 0 14 0;
+#X connect 13 0 14 0;
+#X connect 14 0 17 0;
+#X connect 15 0 16 0;
+#X connect 16 0 18 0;
+#X connect 17 0 19 0;
+#X connect 17 1 20 0;
+#X connect 17 2 18 0;
+#X connect 19 0 18 0;
+#X connect 20 0 18 0;
 #X coords 0 -1 1 1 100 100 2 10 10;
