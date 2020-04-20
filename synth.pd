@@ -1,11 +1,11 @@
-#N canvas 382 224 773 624 12;
+#N canvas -8 -8 1920 1007 12;
 #X obj 1585 783 modules/audio-out~;
 #X obj 12 43 modules/sequencer;
 #X obj 398 362 modules/envelope~;
 #X obj 13 361 modules/mixer~;
 #X obj 12 218 modules/oscillator~;
 #X obj 13 472 s~ \$0-osc-out;
-#X obj 1508 226 modules/noise1~;
+#X obj 1504 244 modules/noise1~;
 #N canvas 524 236 740 432 init-button-vars 0;
 #X obj 12 44 != 127;
 #X obj 12 79 s \$0-button1-off;
@@ -1774,7 +1774,7 @@
 #X restore 1742 323 pd osc-mixer-inputs;
 #X text 1544 18 subpatches/templates;
 #X obj 1585 751 r~ \$0-out;
-#X obj 356 664 s~ \$0-out;
+#X obj 589 48 s~ \$0-out;
 #N canvas -8 -8 1920 1007 osc-fm-lfo 0;
 #X obj 13 76 modules/lfo~;
 #X obj 12 315 *~;
@@ -2298,7 +2298,7 @@
 #X connect 17 0 16 0;
 #X connect 19 0 12 0;
 #X coords 0 549 1 548 100 100 0;
-#X restore 356 632 pd osc-am-lfo;
+#X restore 589 16 pd osc-am-lfo;
 #N canvas 967 151 654 477 osc-inputs 0;
 #X obj 196 12 r \$0-knob4;
 #N canvas 452 52 784 403 buttons-off 0;
