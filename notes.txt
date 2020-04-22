@@ -40,6 +40,7 @@ git push
 	
 -- remote branches (still dont know a whole lot about)
 	git push -u origin <branch name>
+		this pushes the current branch to origin as a new remote branch called <branch_name>
 		
 	
 -- switching branches
@@ -50,6 +51,16 @@ git push
 	checkout the branch you want to merge into. merge the branch into the one you changed 
 	git checkout master
 	git merge <branch name>
+
+
+
+
+-- pull requests
+	submitted a new issue
+	created a new branch for that issue
+	made changes, commited
+	pushed to remote (origin) as a new branch (named after issue)
+	
 
 
 

@@ -500,7 +500,7 @@
 #X connect 21 0 11 0;
 #X connect 22 0 23 0;
 #X restore 254 329 pd amp-env-inputs;
-#N canvas 883 320 941 488 filter-inputs 1;
+#N canvas 883 320 941 488 filter-inputs 0;
 #X obj 309 12 r \$0-knob4;
 #X obj 210 12 r \$0-knob3;
 #X obj 111 12 r \$0-knob2;
