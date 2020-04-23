@@ -1,0 +1,103 @@
+#N canvas -8 -8 1920 1007 12;
+#X floatatom 17 190 5 0 0 0 - - -;
+#X obj 17 221 s \$0-button1-rec;
+#X floatatom 164 190 5 0 0 0 - - -;
+#X floatatom 445 190 5 0 0 0 - - -;
+#X floatatom 298 190 5 0 0 0 - - -;
+#X obj 164 221 s \$0-button2-rec;
+#X obj 298 221 s \$0-button3-rec;
+#X obj 445 221 s \$0-button4-rec;
+#X obj 14 14 cnv 15 92 92 empty empty pads 10 20 0 20 -233017 -66577
+0;
+#X obj 26 56 tgl 15 0 \$0-button1-send \$0-button1-rec empty 17 7 0
+10 -262144 -1 -1 0 127;
+#X obj 44 56 tgl 15 0 \$0-button2-send \$0-button2-rec empty 17 7 0
+10 -262144 -1 -1 0 127;
+#X obj 62 56 tgl 15 0 \$0-button3-send \$0-button3-rec empty 17 7 0
+10 -262144 -1 -1 0 127;
+#X obj 80 56 tgl 15 0 \$0-button4-send \$0-button4-rec empty 17 7 0
+10 -262144 -1 -1 0 127;
+#X obj 16 377 r \$0-button1-rec;
+#X obj 16 409 outlet;
+#X obj 143 409 outlet;
+#X obj 270 409 outlet;
+#X obj 397 409 outlet;
+#X obj 143 377 r \$0-button2-rec;
+#X obj 270 377 r \$0-button3-rec;
+#X obj 397 377 r \$0-button4-rec;
+#X obj 121 10 loadbang;
+#X msg 121 42 0;
+#X obj 121 74 s \$0-button1-rec;
+#X obj 248 74 s \$0-button2-rec;
+#X obj 375 74 s \$0-button3-rec;
+#X obj 502 74 s \$0-button4-rec;
+#X obj 17 158 ctlin 52;
+#X obj 164 158 ctlin 53;
+#X obj 298 158 ctlin 54;
+#X obj 445 158 ctlin 55;
+#X floatatom 16 294 5 0 0 0 - - -;
+#X floatatom 163 294 5 0 0 0 - - -;
+#X floatatom 444 294 5 0 0 0 - - -;
+#X floatatom 297 294 5 0 0 0 - - -;
+#X obj 16 262 ctlin 56;
+#X obj 163 262 ctlin 57;
+#X obj 297 262 ctlin 58;
+#X obj 444 262 ctlin 59;
+#X obj 26 74 tgl 15 0 \$0-button5-send \$0-button5-rec empty 17 7 0
+10 -262144 -1 -1 0 127;
+#X obj 44 74 tgl 15 0 \$0-button6-send \$0-button6-rec empty 17 7 0
+10 -262144 -1 -1 0 127;
+#X obj 62 74 tgl 15 0 \$0-button7-send \$0-button7-rec empty 17 7 0
+10 -262144 -1 -1 0 127;
+#X obj 80 74 tgl 15 0 \$0-button8-send \$0-button8-rec empty 17 7 0
+10 -262144 -1 -1 0 127;
+#X obj 121 106 s \$0-button5-rec;
+#X obj 248 106 s \$0-button6-rec;
+#X obj 375 106 s \$0-button7-rec;
+#X obj 502 106 s \$0-button8-rec;
+#X obj 16 325 s \$0-button5-rec;
+#X obj 163 325 s \$0-button6-rec;
+#X obj 297 325 s \$0-button7-rec;
+#X obj 444 325 s \$0-button8-rec;
+#X obj 524 409 outlet;
+#X obj 651 409 outlet;
+#X obj 778 409 outlet;
+#X obj 905 409 outlet;
+#X obj 524 377 r \$0-button5-rec;
+#X obj 651 377 r \$0-button6-rec;
+#X obj 778 377 r \$0-button7-rec;
+#X obj 905 377 r \$0-button8-rec;
+#X connect 0 0 1 0;
+#X connect 2 0 5 0;
+#X connect 3 0 7 0;
+#X connect 4 0 6 0;
+#X connect 13 0 14 0;
+#X connect 18 0 15 0;
+#X connect 19 0 16 0;
+#X connect 20 0 17 0;
+#X connect 21 0 22 0;
+#X connect 22 0 23 0;
+#X connect 22 0 24 0;
+#X connect 22 0 25 0;
+#X connect 22 0 26 0;
+#X connect 22 0 43 0;
+#X connect 22 0 44 0;
+#X connect 22 0 45 0;
+#X connect 22 0 46 0;
+#X connect 27 0 0 0;
+#X connect 28 0 2 0;
+#X connect 29 0 4 0;
+#X connect 30 0 3 0;
+#X connect 31 0 47 0;
+#X connect 32 0 48 0;
+#X connect 33 0 50 0;
+#X connect 34 0 49 0;
+#X connect 35 0 31 0;
+#X connect 36 0 32 0;
+#X connect 37 0 34 0;
+#X connect 38 0 33 0;
+#X connect 55 0 51 0;
+#X connect 56 0 52 0;
+#X connect 57 0 53 0;
+#X connect 58 0 54 0;
+#X coords 0 -1 1 1 100 100 2 10 10;
