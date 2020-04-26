@@ -1,4 +1,4 @@
-#N canvas -8 -8 1920 1007 12;
+#N canvas 550 292 733 483 12;
 #X obj 268 43 modules/audio-out~;
 #X obj 12 43 modules/sequencer;
 #X obj 150 536 modules/envelope~;
@@ -65,13 +65,13 @@
 #X connect 25 0 17 0;
 #X connect 26 0 18 0;
 #X connect 27 0 19 0;
-#X restore 1741 227 pd init-button-vars;
+#X restore 803 311 pd init-button-vars;
 #X obj 12 504 modules/filter~;
 #N canvas 286 244 335 124 init-dsp 0;
 #X msg 13 48 \; pd dsp 1;
 #X obj 13 16 loadbang;
 #X connect 1 0 0 0;
-#X restore 1743 256 pd init-dsp;
+#X restore 805 340 pd init-dsp;
 #N canvas 452 52 784 403 button1 0;
 #X obj 24 83 spigot 0;
 #X obj 24 147 spigot 0;
@@ -124,7 +124,7 @@
 #X connect 22 0 16 1;
 #X connect 24 0 9 1;
 #X connect 25 0 13 1;
-#X restore 1743 289 pd button1;
+#X restore 805 373 pd button1;
 #X obj 105 710 s~ \$0-filter-out;
 #X obj 105 154 s \$0-gate;
 #N canvas 441 125 450 300 seq-inputs 0;
@@ -1190,7 +1190,7 @@
 #X connect 12 7 20 0;
 #X connect 22 1 23 0;
 #X coords 0 -1 1 1 201 201 2 10 10;
-#X restore 1699 6 pd midi-controller;
+#X restore 379 248 pd midi-controller;
 #N canvas 630 287 450 300 osc-mixer-inputs 0;
 #X obj 12 140 outlet;
 #X obj 125 76 outlet;
@@ -1367,8 +1367,8 @@
 #X connect 8 0 0 0;
 #X connect 9 0 1 0;
 #X connect 10 0 4 0;
-#X restore 1742 323 pd osc-mixer-inputs;
-#X text 1544 18 subpatches/templates;
+#X restore 804 407 pd osc-mixer-inputs;
+#X text 799 283 subpatches/templates;
 #N canvas -8 -8 1920 1007 osc-fm-lfo 0;
 #X obj 13 76 modules/lfo~;
 #X obj 12 315 *~;
@@ -1494,7 +1494,7 @@
 #X connect 6 0 5 0;
 #X connect 7 0 0 0;
 #X connect 8 0 7 0;
-#X restore 1745 395 pd osc-fm-lfo;
+#X restore 807 479 pd osc-fm-lfo;
 #N canvas 677 126 450 549 osc-am-lfo 0;
 #X obj 150 84 modules/lfo~;
 #X obj 150 20 r \$0-knob1;
@@ -1692,7 +1692,7 @@
 #X connect 16 0 18 0;
 #X connect 17 0 16 0;
 #X coords 0 549 1 548 100 100 0;
-#X restore 1747 359 pd osc-am-lfo;
+#X restore 809 443 pd osc-am-lfo;
 #N canvas 720 116 432 679 osc-am-lfo 0;
 #X obj 170 81 modules/lfo~;
 #X obj 170 17 r \$0-knob1;
