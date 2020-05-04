@@ -1,4 +1,4 @@
-#N canvas 1010 527 597 371 12;
+#N canvas 1038 253 597 371 12;
 #X obj 121 10 inlet;
 #N canvas 905 179 450 300 sine~ 0;
 #X obj 12 44 osc~;
@@ -7,7 +7,7 @@
 #X connect 0 0 1 0;
 #X connect 2 0 0 0;
 #X restore 11 270 pd sine~;
-#N canvas 0 50 450 300 saw~ 0;
+#N canvas 958 83 450 300 saw~ 0;
 #X obj 12 44 phasor~;
 #X obj 12 76 *~ 2;
 #X obj 12 108 -~ 1;
@@ -17,7 +17,7 @@
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 4 0 0 0;
-#X restore 102 270 pd saw~;
+#X restore 82 270 pd saw~;
 #N canvas 197 369 450 300 square~ 0;
 #X obj 12 44 phasor~;
 #X obj 12 108 *~ 2;
@@ -32,16 +32,16 @@
 #X connect 4 0 1 0;
 #X connect 5 0 4 1;
 #X connect 6 0 0 0;
-#X restore 186 270 pd square~;
+#X restore 245 270 pd square~;
 #X obj 11 302 outlet~;
-#X obj 102 302 outlet~;
-#X obj 186 302 outlet~;
+#X obj 82 302 outlet~;
+#X obj 245 302 outlet~;
 #X obj 14 14 cnv 15 92 92 empty empty osc 10 20 0 20 -233017 -66577
 0;
 #X obj 24 54 hsl 32 15 0 127 0 0 \$0-freq-send \$0-freq-rec freq -2
--6 0 10 -262144 -1 -1 1172 1;
+-6 0 10 -262144 -1 -1 1635 1;
 #X obj 24 80 hsl 32 15 0.01 0.99 0 0 \$0-pwm-send \$0-pwm-rec pwm -2
--6 0 10 -262144 -1 -1 890 1;
+-6 0 10 -262144 -1 -1 1587 1;
 #X obj 121 42 s \$0-freq-rec;
 #X obj 10 121 r \$0-freq-send;
 #X obj 298 10 inlet;
@@ -57,6 +57,22 @@
 #X obj 227 10 inlet~;
 #X obj 227 42 s~ \$0-fm;
 #X obj 29 185 r~ \$0-fm;
+#N canvas 1113 520 450 300 triangle~ 0;
+#X obj 12 44 phasor~;
+#X obj 12 204 outlet~;
+#X obj 12 12 inlet~;
+#X obj 12 108 abs~;
+#X obj 12 76 -~ 0.5;
+#X obj 12 140 *~ 4;
+#X obj 12 172 -~ 1;
+#X connect 0 0 4 0;
+#X connect 2 0 0 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 1 0;
+#X restore 146 270 pd triangle~;
+#X obj 146 302 outlet~;
 #X connect 0 0 10 0;
 #X connect 1 0 4 0;
 #X connect 2 0 5 0;
@@ -74,7 +90,9 @@
 #X connect 20 0 1 0;
 #X connect 20 0 2 0;
 #X connect 20 0 3 0;
+#X connect 20 0 25 0;
 #X connect 21 0 20 0;
 #X connect 22 0 23 0;
 #X connect 24 0 20 1;
+#X connect 25 0 26 0;
 #X coords 0 -1 1 1 100 100 2 10 10;
