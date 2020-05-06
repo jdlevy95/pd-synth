@@ -1,4 +1,4 @@
-#N canvas -7 0 958 473 12;
+#N canvas 493 105 958 473 12;
 #X obj 228 44 modules/audio-out~;
 #X obj 12 44 modules/sequencer;
 #X obj 59 501 modules/envelope~;

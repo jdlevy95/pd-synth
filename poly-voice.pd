@@ -1,4 +1,4 @@
-#N canvas 602 79 958 473 12;
+#N canvas 903 510 958 473 12;
 #X obj 12 219 modules/oscillator~;
 #N canvas 607 349 654 477 osc-inputs 0;
 #X obj 196 12 r \$0-knob4;
@@ -446,7 +446,7 @@
 #X obj 59 501 modules/envelope~;
 #X obj 13 362 modules/mixer~;
 #X obj 14 612 modules/vca~;
-#N canvas 261 167 680 300 amp-env-inputs 0;
+#N canvas 261 167 680 300 amp-env-inputs 1;
 #X obj 110 12 r \$0-knob1;
 #X obj 110 140 outlet;
 #X obj 603 12 loadbang;

@@ -31,7 +31,7 @@
 #X obj 10 153 mtof;
 #X obj 14 14 cnv 15 92 92 empty empty lfo 10 20 0 20 -233017 -66577
 0;
-#X obj 24 54 hsl 32 15 -64 63 0 0 \$0-freq-send \$0-freq-rec freq -2
+#X obj 24 54 hsl 32 15 -96 31 0 0 \$0-freq-send \$0-freq-rec freq -2
 -6 0 10 -262144 -1 -1 0 1;
 #X obj 121 74 s \$0-freq-rec;
 #X obj 10 121 r \$0-freq-send;
@@ -45,8 +45,7 @@
 #X obj 407 234 s \$0-pwm-rec;
 #X msg 361 106 0.01;
 #X msg 384 138 0.99;
-#X obj 121 42 - 64;
-#N canvas 1113 520 217 264 triangle~ 1;
+#N canvas 1113 520 217 245 triangle~ 0;
 #X obj 12 44 phasor~;
 #X obj 12 204 outlet~;
 #X obj 12 108 abs~;
@@ -62,14 +61,15 @@
 #X connect 6 0 0 0;
 #X restore 145 220 pd triangle~;
 #X obj 145 252 outlet~;
-#X connect 0 0 21 0;
+#X obj 121 42 - 96;
+#X connect 0 0 23 0;
 #X connect 1 0 4 0;
 #X connect 2 0 5 0;
 #X connect 3 0 6 0;
 #X connect 7 0 1 0;
 #X connect 7 0 2 0;
 #X connect 7 0 3 0;
-#X connect 7 0 22 0;
+#X connect 7 0 21 0;
 #X connect 11 0 7 0;
 #X connect 13 0 14 0;
 #X connect 14 0 17 0;
@@ -80,6 +80,6 @@
 #X connect 17 2 18 0;
 #X connect 19 0 18 0;
 #X connect 20 0 18 0;
-#X connect 21 0 10 0;
-#X connect 22 0 23 0;
+#X connect 21 0 22 0;
+#X connect 23 0 10 0;
 #X coords 0 -1 1 1 100 100 2 10 10;
