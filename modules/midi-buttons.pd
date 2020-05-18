@@ -35,10 +35,11 @@
 #X obj 248 74 s \$0-button2-rec;
 #X obj 375 74 s \$0-button3-rec;
 #X obj 502 74 s \$0-button4-rec;
+#X obj 505 153 s \$0-button1-rec;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 3 0 8 0;
-#X connect 4 0 10 0;
+#X connect 4 0 31 0;
 #X connect 5 0 9 0;
 #X connect 6 0 3 0;
 #X connect 7 0 5 0;

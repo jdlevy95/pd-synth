@@ -1,4 +1,4 @@
-#N canvas 493 105 958 473 12;
+#N canvas 451 105 958 473 12;
 #X obj 228 44 modules/audio-out~;
 #X obj 12 44 modules/sequencer;
 #X obj 59 501 modules/envelope~;
@@ -1321,12 +1321,12 @@
 #X connect 9 0 1 0;
 #X connect 10 0 4 0;
 #X restore 66 330 pd osc-mixer-inputs;
-#N canvas 214 266 885 493 midi-controller 0;
+#N canvas 319 352 885 493 midi-controller 0;
 #X obj 10 10 modules/midi-knobs;
 #X obj 10 111 modules/midi-buttons;
 #X obj 200 436 s \$0-note;
 #X obj 111 10 modules/midi-keys;
-#X obj 314 386 s \$0-button1-on;
+#X obj 335 386 s \$0-button1-on;
 #X obj 10 402 s \$0-knob1;
 #X obj 41 370 s \$0-knob2;
 #X obj 72 338 s \$0-knob3;
@@ -1345,7 +1345,7 @@
 #X obj 293 436 s \$0-gate;
 #X obj 233 14 modules/midi-wheels;
 #X obj 326 123 s \$0-wheel;
-#X obj 407 290 s \$0-button1-on;
+#X obj 407 290 s \$0-button4-on;
 #X connect 0 0 5 0;
 #X connect 0 1 6 0;
 #X connect 0 2 7 0;
