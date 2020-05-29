@@ -1,0 +1,146 @@
+#N canvas 144 167 1920 1007 12;
+#X obj 12 52 ctlin 1;
+#X text 16 17 pots;
+#X text 13 157 multi-1;
+#X obj 15 188 ctlin 22;
+#X text 13 277 multi-2;
+#X obj 1373 43 hsl 32 15 0 127 0 0 \$0-pot1-send \$0-pot1-rec pot1
+-2 -6 0 10 -262144 -1 -1 3100 1;
+#X obj 125 52 ctlin 2;
+#X obj 231 51 ctlin 3;
+#X obj 337 51 ctlin 4;
+#X obj 443 51 ctlin 5;
+#X obj 12 83 s \$0-pot1-rec;
+#X obj 125 83 s \$0-pot2-rec;
+#X obj 1373 73 hsl 32 15 0 127 0 0 \$0-pot2-send \$0-pot2-rec pot2
+-2 -6 0 10 -262144 -1 -1 3100 1;
+#X obj 231 83 s \$0-pot3-rec;
+#X obj 337 83 s \$0-pot4-rec;
+#X obj 443 83 s \$0-pot5-rec;
+#X obj 549 51 ctlin 6;
+#X obj 549 83 s \$0-pot6-rec;
+#X obj 655 51 ctlin 7;
+#X obj 655 83 s \$0-pot7-rec;
+#X obj 761 51 ctlin 8;
+#X obj 761 83 s \$0-pot8-rec;
+#X obj 867 51 ctlin 9;
+#X obj 867 83 s \$0-pot9-rec;
+#X obj 973 51 ctlin 10;
+#X obj 973 83 s \$0-pot10-rec;
+#X obj 1086 51 ctlin 11;
+#X obj 1086 83 s \$0-pot11-rec;
+#X obj 1199 51 ctlin 12;
+#X obj 1199 83 s \$0-pot12-rec;
+#X obj 1373 103 hsl 32 15 0 127 0 0 \$0-pot3-send \$0-pot3-rec pot3
+-2 -6 0 10 -262144 -1 -1 3100 1;
+#X obj 1373 133 hsl 32 15 0 127 0 0 \$0-pot4-send \$0-pot4-rec pot4
+-2 -6 0 10 -262144 -1 -1 3100 1;
+#X obj 1373 163 hsl 32 15 0 127 0 0 \$0-pot5-send \$0-pot5-rec pot5
+-2 -6 0 10 -262144 -1 -1 3100 1;
+#X obj 1373 193 hsl 32 15 0 127 0 0 \$0-pot6-send \$0-pot6-rec pot6
+-2 -6 0 10 -262144 -1 -1 3100 1;
+#X obj 1373 223 hsl 32 15 0 127 0 0 \$0-pot7-send \$0-pot7-rec pot7
+-2 -6 0 10 -262144 -1 -1 3100 1;
+#X obj 1373 253 hsl 32 15 0 127 0 0 \$0-pot8-send \$0-pot8-rec pot8
+-2 -6 0 10 -262144 -1 -1 3100 1;
+#X obj 1373 283 hsl 32 15 0 127 0 0 \$0-pot9-send \$0-pot9-rec pot9
+-2 -6 0 10 -262144 -1 -1 3100 1;
+#X obj 1373 313 hsl 32 15 0 127 0 0 \$0-pot10-send \$0-pot10-rec pot10
+-2 -6 0 10 -262144 -1 -1 3100 1;
+#X obj 1373 343 hsl 32 15 0 127 0 0 \$0-pot11-send \$0-pot11-rec pot11
+-2 -6 0 10 -262144 -1 -1 3100 1;
+#X obj 1373 373 hsl 32 15 0 127 0 0 \$0-pot12-send \$0-pot12-rec pot12
+-2 -6 0 10 -262144 -1 -1 3100 1;
+#X obj 606 190 tgl 15 0 \$0-multi1-1-send \$0-multi1-1-rec multi1-1
+17 7 0 10 -262144 -1 -1 127 1;
+#X obj 15 220 s \$0-multi1-1-rec;
+#X obj 149 188 ctlin 23;
+#X obj 149 220 s \$0-multi1-2-rec;
+#X obj 283 188 ctlin 24;
+#X obj 283 220 s \$0-multi1-3-rec;
+#X obj 417 188 ctlin 25;
+#X obj 417 220 s \$0-multi1-4-rec;
+#X obj 606 210 tgl 15 0 \$0-multi1-2-send \$0-multi1-2-rec multi1-2
+17 7 0 10 -262144 -1 -1 0 1;
+#X obj 606 230 tgl 15 0 \$0-multi1-3-send \$0-multi1-3-rec multi1-3
+17 7 0 10 -262144 -1 -1 0 1;
+#X obj 606 250 tgl 15 0 \$0-multi1-4-send \$0-multi1-4-rec multi1-4
+17 7 0 10 -262144 -1 -1 0 1;
+#X obj 605 305 tgl 15 0 \$0-multi2-1-send \$0-multi2-1-rec multi2-1
+17 7 0 10 -262144 -1 -1 0 1;
+#X obj 605 325 tgl 15 0 \$0-multi2-2-send \$0-multi2-2-rec multi2-2
+17 7 0 10 -262144 -1 -1 0 1;
+#X obj 605 345 tgl 15 0 \$0-multi2-3-send \$0-multi2-3-rec multi2-3
+17 7 0 10 -262144 -1 -1 0 1;
+#X obj 605 365 tgl 15 0 \$0-multi2-4-send \$0-multi2-4-rec multi2-4
+17 7 0 10 -262144 -1 -1 0 1;
+#X obj 15 308 ctlin 26;
+#X obj 149 308 ctlin 27;
+#X obj 283 308 ctlin 28;
+#X obj 417 308 ctlin 29;
+#X obj 15 340 s \$0-multi2-1-rec;
+#X obj 149 340 s \$0-multi2-2-rec;
+#X obj 283 340 s \$0-multi2-3-rec;
+#X obj 417 340 s \$0-multi2-4-rec;
+#X text 13 397 multi-3;
+#X obj 15 428 ctlin 30;
+#X obj 15 460 s \$0-multi3-1-rec;
+#X obj 149 428 ctlin 31;
+#X obj 149 460 s \$0-multi3-2-rec;
+#X obj 283 428 ctlin 32;
+#X obj 283 460 s \$0-multi3-3-rec;
+#X obj 417 428 ctlin 33;
+#X obj 417 460 s \$0-multi3-4-rec;
+#X obj 693 432 tgl 15 0 \$0-multi3-1-send \$0-multi3-1-rec multi3-1
+17 7 0 10 -262144 -1 -1 127 1;
+#X obj 693 452 tgl 15 0 \$0-multi3-2-send \$0-multi3-2-rec multi3-2
+17 7 0 10 -262144 -1 -1 0 1;
+#X obj 693 472 tgl 15 0 \$0-multi3-3-send \$0-multi3-3-rec multi3-3
+17 7 0 10 -262144 -1 -1 0 1;
+#X obj 693 492 tgl 15 0 \$0-multi3-4-send \$0-multi3-4-rec multi3-4
+17 7 0 10 -262144 -1 -1 0 1;
+#X obj 693 512 tgl 15 0 \$0-multi3-5-send \$0-multi3-5-rec multi3-5
+17 7 0 10 -262144 -1 -1 0 1;
+#X obj 551 460 s \$0-multi3-5-rec;
+#X obj 551 428 ctlin 34;
+#X obj 15 570 ctlin 35;
+#X text 13 537 switches;
+#X obj 444 564 tgl 15 0 \$0-switch1-send \$0-switch1-rec switch1 17
+7 0 10 -262144 -1 -1 0 1;
+#X obj 15 602 s \$0-switch1-rec;
+#X obj 142 570 ctlin 36;
+#X obj 142 602 s \$0-switch2-rec;
+#X obj 269 570 ctlin 37;
+#X obj 444 584 tgl 15 0 \$0-switch2-send \$0-switch2-rec switch2 17
+7 0 10 -262144 -1 -1 0 1;
+#X obj 444 604 tgl 15 0 \$0-switch3-send \$0-switch3-rec switch3 17
+7 0 10 -262144 -1 -1 0 1;
+#X obj 269 602 s \$0-switch3-rec;
+#X connect 0 0 10 0;
+#X connect 3 0 41 0;
+#X connect 6 0 11 0;
+#X connect 7 0 13 0;
+#X connect 8 0 14 0;
+#X connect 9 0 15 0;
+#X connect 16 0 17 0;
+#X connect 18 0 19 0;
+#X connect 20 0 21 0;
+#X connect 22 0 23 0;
+#X connect 24 0 25 0;
+#X connect 26 0 27 0;
+#X connect 28 0 29 0;
+#X connect 42 0 43 0;
+#X connect 44 0 45 0;
+#X connect 46 0 47 0;
+#X connect 55 0 59 0;
+#X connect 56 0 60 0;
+#X connect 57 0 61 0;
+#X connect 58 0 62 0;
+#X connect 64 0 65 0;
+#X connect 66 0 67 0;
+#X connect 68 0 69 0;
+#X connect 70 0 71 0;
+#X connect 78 0 77 0;
+#X connect 79 0 82 0;
+#X connect 83 0 84 0;
+#X connect 85 0 88 0;

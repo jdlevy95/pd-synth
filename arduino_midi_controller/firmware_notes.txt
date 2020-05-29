@@ -1,0 +1,31 @@
+----- Making a USB device -----
+Code with MIDI_controller library *, upload to device as normal
+Open Flip *
+Enter DFU mode (Jump 2 pins closest to USB)
+	Device know might be recoginzed as unknown in Device Manager
+	Point it to Flip directory for driver install
+Device (menu) or IC (icon). Select ATmega16U2
+Load Hex. Select arduino_midi.hex *
+USB cable (icon) or CTRL + U, Open
+Run  (bottom left)
+Unplug and replug USB cable
+Test success with pd
+
+
+----- Back to coding/testing -----
+Open Flip *
+Enter DFU mode (Jump 2 pins closest to USB)
+Device (menu) or IC (icon). Select ATmega16U2
+Load Hex. Select Arduino-usbserial-atmega16u2-Mega2560-Rev3 *
+USB cable (icon) or CTRL + U, Open
+Run  (bottom left)
+Unplug and replug USB cable
+Check success by port referencing arduino 2560
+
+* https://github.com/tttapa/MIDI_controller
+* https://www.microchip.com/developmenttools/ProductDetails/flip
+* https://github.com/ddiakopoulos/hiduino
+* https://github.com/arduino/ArduinoCore-avr/tree/master/firmwares/atmegaxxu2
+
+
+TODO: Test reset button instead of plug replug

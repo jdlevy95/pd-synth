@@ -3,7 +3,7 @@
 #X obj 14 14 cnv 15 92 92 empty empty mixer 10 20 0 20 -233017 -66577
 0;
 #X obj 24 54 hsl 32 15 0 1 0 0 \$0-volume1-send \$0-volume1-rec 1 -2
--6 0 10 -262144 -1 -1 3100 1;
+-6 0 10 -262144 -1 -1 0 1;
 #X obj 24 80 hsl 32 15 0 1 0 0 \$0-volume3-send \$0-volume3-rec 3 -2
 -6 0 10 -262144 -1 -1 0 1;
 #X obj 65 54 hsl 32 15 0 1 0 0 \$0-volume2-send \$0-volume2-rec 2 -2
