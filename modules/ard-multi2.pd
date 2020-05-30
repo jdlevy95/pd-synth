@@ -1,0 +1,33 @@
+#N canvas 0 50 1035 655 12;
+#X obj 11 10 tgl 15 0 \$0-multi2-1-send \$0-multi2-1-rec multi2-1 17
+7 0 10 -262144 -1 -1 0 1;
+#X obj 11 30 tgl 15 0 \$0-multi2-2-send \$0-multi2-2-rec multi2-2 17
+7 0 10 -262144 -1 -1 0 1;
+#X obj 11 50 tgl 15 0 \$0-multi2-3-send \$0-multi2-3-rec multi2-3 17
+7 0 10 -262144 -1 -1 0 1;
+#X obj 11 70 tgl 15 0 \$0-multi2-4-send \$0-multi2-4-rec multi2-4 17
+7 0 10 -262144 -1 -1 0 1;
+#X obj 114 56 s \$0-multi2-1-rec;
+#X obj 248 56 s \$0-multi2-2-rec;
+#X obj 382 56 s \$0-multi2-3-rec;
+#X obj 516 56 s \$0-multi2-4-rec;
+#X obj 114 24 ctlin 28;
+#X obj 248 24 ctlin 29;
+#X obj 382 24 ctlin 30;
+#X obj 516 24 ctlin 31;
+#X obj 14 158 outlet;
+#X obj 148 158 outlet;
+#X obj 282 158 outlet;
+#X obj 416 158 outlet;
+#X obj 14 126 r \$0-multi2-1-rec;
+#X obj 148 126 r \$0-multi2-2-rec;
+#X obj 282 126 r \$0-multi2-3-rec;
+#X obj 416 126 r \$0-multi2-4-rec;
+#X connect 8 0 4 0;
+#X connect 9 0 5 0;
+#X connect 10 0 6 0;
+#X connect 11 0 7 0;
+#X connect 16 0 12 0;
+#X connect 17 0 13 0;
+#X connect 18 0 14 0;
+#X connect 19 0 15 0;
