@@ -1,0 +1,178 @@
+Welcome to the synth-v2 wiki!
+Check out the pages on the right for more information.
+# Project goals
+* Overall modular synth design
+* Standalone Pure Data (abbreviated 'pd') patch for each synth feature (called 'modules')
+* Mirror Clean Code practices in pd
+* Make a standalone patch fully controlled by Alesis V25 MIDI controller
+* Utilize MIDI controller pads
+* Better git practices (branching), using GitHub tools (Issues, Pull Requests, Projects, Wiki)
+# Synth features
+* Oscillator
+  * Generate sine, triangle, saw, and square waves
+  * Control note frequency and gate via MIDI controller
+* Sequencer
+  * 16 step sequencer with clock (bpm) control
+* Noise
+  * Generate white noise
+* Filter
+  * Dedicated band pass filter for both oscillator and noise with frequency cutoff and resonance
+* Envelope
+  * Generate envelopes for both oscillator amplitude and filter frequency cutoff
+* LFO - Dedicated LFO for the following:
+  * Oscillator: Amplitude, frequency, filter frequency cutoff
+  * Noise: Amplitude, filter frequency cutoff
+  * Sine, triangle, saw, and square (PWM control) waves
+
+
+
+![MIDI controls](https://user-images.githubusercontent.com/14321696/80142479-3716ce80-8579-11ea-8764-1dff269168ad.png)
+### No buttons - Oscillator mode
+* Knob 1: Sine amount
+* Knob 2: Saw amount
+* Knob 3: Square amount
+* Knob 4: Square pulse width modulation amount
+### Button 1 - Sequencer and noise mode
+* Knob 1: Clock speed
+* Knob 2: Unused
+* Knob 3: Noise amplitude amount
+* Knob 4: Master volume
+### Button 2 - Oscillator envelope mode
+* Knob 1: Attack
+* Knob 2: Decay
+* Knob 3: Sustain
+* Knob 4: Release
+### Button 3 - Filter mode
+* Knob 1: Oscillator filter frequency
+* Knob 2: Oscillator filter resonance
+* Knob 3: Noise filter frequency
+* Knob 4: Noise filter resonance
+### Button 2+3 - Filter envelope mode
+* Knob 1: Attack
+* Knob 2: Decay
+* Knob 3: Sustain
+* Knob 4: Release
+### Button 5 - Oscillator amplitude LFO
+* Knob 1: LFO frequency
+### Button 6 - Oscillator frequency LFO
+* Knob 1: LFO frequency
+* Wheel: Amount
+### Button 7 - Filter frequency LFO
+* Knob 1: LFO frequency
+* Wheel: Amount
+### Button 9 - Noise amplitude LFO
+* Knob 1: LFO frequency
+### Button 10 - Noise frequency LFO
+* Knob 1: LFO frequency
+* Wheel: Amount
+
+### Button 12 - LFO wave amplitudes
+Used in conjunction with any LFO button (5-11). Does nothing when only 12 is selected
+ * Knob 1: Sine amplitude
+ * Knob 2: Saw amplitude
+ * Knob 3: Square amplitude
+ * Knob 4: Square pulse width modulation amount
+
+Selecting any LFO button (5-12) will override the knobs' control even if buttons 1-4 are still selected. 
+
+ 
+
+
+### Oscillator
+![osc](https://user-images.githubusercontent.com/14321696/80120534-25253380-8559-11ea-8e68-febcac80fe7b.png)
+* Inputs:
+  * Input 1: MIDI note to be converted to frequency (controls 'freq', 0-127)
+  * Input 2 (audio): Oscillator frequency modulation LFO
+  * Input 3: Square wave pulse width modulation (controls 'pwm', 0-127, converted to 0.01-0.99) 
+* Outputs:
+  * Output 1 (audio): Sine wave
+  * Output 2 (audio): Saw wave
+  * Output 3 (audio): Square wave
+### Filter
+![filter](https://user-images.githubusercontent.com/14321696/80129990-e6e24100-8565-11ea-83eb-8cc5b6c00bb7.png)
+* Inputs
+  * Input 1 (audio): Signal to filter
+  * Input 2: Low pass filter frequency cutoff (controls 'lp', 0-127)
+  * Input 3: High pass frequency cutoff (controls 'hp', 0-127)
+  * Input 4: Band pass frequency cutoff (controls 'bp', 0-127)
+  * Input 5: Band pass resononce (controls 'res', 0-127 converted to 0-10)
+  * Input 6 (audio): Filter frequency modulation LFO
+  * Input 7 (audio): Filter envelope  
+* Outputs
+  * Outlet 1: Low pass filter
+  * Outlet 2: High pass filter
+  * Outlet 3: Band pass filter
+### Envelope
+![envelope](https://user-images.githubusercontent.com/14321696/80132007-0fb80580-8569-11ea-8d64-fc0212ebeb6d.png)
+* Inputs
+  * Input 1: Gate (0-127)
+  * Input 2: Attack (controls 'a', 0-127, 0-500ms)
+  * Input 3: Decay (controls 'd', 0-127, 0-500ms)
+  * Input 4: Sustain (controls 's', 0-127, 0-1)
+  * Input 5: Release (controls 'r', 0-127, 0-1000ms)
+* Outputs
+  * Output 1 (audio): Envelope
+### 16 step sequencer
+![sequencer](https://user-images.githubusercontent.com/14321696/80132571-e481e600-8569-11ea-9c14-9408666de415.png)
+* Inputs
+  * Input 1: MIDI note (0-127)
+  * Input 2: Clock speed (controls 'clock', 0-127, converted to BPM)
+* Outputs
+  * Output 1: Sequentially played MIDI notes (0-127)
+  * Output 2: Gate (0-127)
+### VCA
+![vca](https://user-images.githubusercontent.com/14321696/80134656-0df04100-856d-11ea-94f7-87ec927c4e49.png)
+* Inputs
+  * Input 1 (audio): Carrier signal
+  * Input 2 (audio): Modulating signal
+* Outputs
+  * Output 1 (audio): Multiplied signal
+### Mixer (4 VCAs with amplitude control
+![mixer](https://user-images.githubusercontent.com/14321696/80132597-ecda2100-8569-11ea-9010-88653f6a20ba.png)
+* Inputs
+  * Input 1 (audio): Signal 1
+  * Input 2 (audio): Signal 2
+  * Input 3 (audio): Signal 3
+  * Input 4 (audio): Signal 4
+  * Input 5: Signal 1 amplitude (controls '1', 0-127)
+  * Input 6: Signal 2 amplitude (controls '2', 0-127)
+  * Input 7: Signal 3 amplitude (controls '3', 0-127)
+  * Input 8: Signal 4 amplitude (controls '4', 0-127)
+* Outputs
+  * Output 1 (audio): Mixed signal
+### Audio out (DAC and oscilloscope)
+![audio-out](https://user-images.githubusercontent.com/14321696/80132628-f794b600-8569-11ea-9e05-145c4476719f.png)
+* Inputs
+  * Input 1 (audio): Audio to output
+  * Input 2: Master volume (controls 'master', 0-127)
+### MIDI keys
+![keys](https://user-images.githubusercontent.com/14321696/80136325-8b1cb580-856f-11ea-9192-acc8c8ddc8bc.png)
+* Outputs
+  * Output 1: MIDI note (0-127)
+  * Output 2: Note velocity (0-127)
+### Knobs
+![knobs](https://user-images.githubusercontent.com/14321696/80136326-8b1cb580-856f-11ea-9fbc-d361a422142a.png)
+* Outputs
+  * Output 1: Knob 1 value (0-127)
+  * Output 2: Knob 2 value (0-127)
+  * Output 3: Knob 3 value (0-127)
+  * Output 4: Knob 4 value (0-127)
+### Buttons
+![buttons](https://user-images.githubusercontent.com/14321696/80136328-8bb54c00-856f-11ea-8c48-db57d956ae65.png)
+* Outputs
+  * Output 1: Button 1 value (0/127)
+  * Output 2: Button 2 value (0/127)
+  * Output 3: Button 3 value (0/127)
+  * Output 4: Button 4 value (0/127)
+### Pads (act as buttons)
+![pads](https://user-images.githubusercontent.com/14321696/80136323-8b1cb580-856f-11ea-87e3-cd06fc7f2a8d.png)
+* Outputs
+  * Output 1: Button 5 value (0/127)
+  * Output 2: Button 6 value (0/127)
+  * Output 3: Button 7 value (0/127)
+  * Output 4: Button 8 value (0/127)
+  * Output 5: Button 9 value (0/127)
+  * Output 6: Button 10 value (0/127)
+  * Output 7: Button 11 value (0/127)
+  * Output 8: Button 12 value (0/127)
+
